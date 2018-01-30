@@ -1,0 +1,154 @@
+/*所有元素重置*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*动画*/
+/*用于让碟片旋转*/
+@keyframes circle {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*页面样式*/
+/*整夜容器部分*/
+.page {
+    position: relative;
+    background: url("../images/background.jpeg") top;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/*左上角logo*/
+.logo {
+    position: absolute;
+    background: url("../images/logo_3x.png") no-repeat center;
+    background-size: 100%;
+    width: 26.6vw;
+    height: 4.5vw;
+    left: 2.6vw;
+    top: 3.2vw;
+}
+
+/*碟片部分*/
+.song {
+    position: relative;
+}
+
+/*碟片*/
+/*碟片封面*/
+.song .vinyl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 18vw;
+}
+.song .cover {
+    position: absolute;
+    width: 49vw;
+    margin: auto;
+    z-index: 0;
+}
+
+.song .cover img {
+    width: 100%;
+    border-radius: 50%;
+    animation: circle 20s linear infinite;
+}
+
+/*碟片黑胶*/
+.song .disc {
+    z-index: 1;
+}
+/*碟片反光*/
+.song .disc-light {
+position: absolute;
+z-index: 2;
+animation: circle 20s linear infinite;
+}
+.song .disc img,
+.song .disc-light img {
+    width: 79vw;
+    height: 79vw;
+}
+
+
+/*指针*/
+.song .needle {
+    position: absolute;
+    top: 0;
+    margin-left: 47vw;
+    width: 25.5vw;
+    z-index: 3;
+}
+
+.song .needle img {
+    width: 100%;
+}
+
+/*歌词部分*/
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6.7vw;
+    color: #fefefe;
+    text-align: center;
+}
+/*歌曲名*/
+.description .name {
+    width: 81.3vw;
+    font-size: 4.8vw;
+    line-height: 1.1;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+/*歌词*/
+/*歌词容器*/
+.description .lyric-container {
+    width: 80vw;
+    margin-top: 3.8vw;
+    font-size: 4.3vw;
+    height: 26vw;
+    overflow: hidden;
+}
+/*歌词文本*/
+.description .lyric p {
+    padding: 2.2vw 0;
+    line-height: 1;
+}
+
+/*页脚链接*/
+.links {
+    position: absolute;
+    bottom: 5vw;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.links span {
+    display: block;
+    width: 42vw;
+    padding: 2.8vw;
+    border: 1px solid #d33a31;
+    border-radius: 10.6vw;
+    text-decoration: none;
+    text-align: center;
+    font-size: 4.8vw;
+    line-height: 1;
+}
+.links .open {
+    color: #d33a31;
+}
+.links .download {
+    color: #fefefe;
+    background-color: #d33a31;
+}

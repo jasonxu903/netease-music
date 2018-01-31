@@ -10,48 +10,68 @@
     <title>Document</title>
 </head>
 <body>
+<!--页面主体开始-->
+<!--使用 page 代替 body 防止出现意外-->
 <div class="page">
+    <!-- masking 用于给整体页面增加一层半透明黑色蒙版-->
     <div class="masking">
+        <!--页面左上角 logo -->
         <div class="logo">
         </div>
+        <!--歌曲区域，包括旋转的光盘和歌词-->
         <div class="song">
+            <!--光盘上的指针-->
             <div class="needle">
                 <img src="./images/needle-plus.png" alt="">
             </div>
+            <!--光盘区域开始-->
             <div class="vinyl">
+                <!--歌曲封面-->
                 <div class="cover">
                     <img src="./images/cover.jpeg" alt="">
                 </div>
+                <!--黑胶部分-->
                 <div class="disc">
                     <img src="./images/disc-plus.png" alt="">
                 </div>
+                <!--黑胶光晕-->
                 <div class="disc-light">
                     <img src="./images/disc_light-plus.png" alt="">
                 </div>
+                <!--暂停按钮，视觉效果不可见-->
+                <div class="pause active"></div>
+                <!--播放按钮，播放状态下不可见-->
+                <div class="play">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-play"></use>
+                    </svg>
+                </div>
             </div>
+            <!--光盘区域结束-->
+            <!--歌词区域开始-->
             <div class="description">
-                <h2 class="name">曲名曲名曲名曲名曲名曲名曲名曲名曲名曲名曲名曲名曲名曲名曲名曲名</h2>
+                <!--歌曲名-->
+                <h2 class="name">说散就散（电影《前任3：再见前任》主题曲）</h2>
+                <!--歌词外层容器-->
                 <div class="lyric-container">
+                    <!--歌词内层容器，歌词真正所在区域-->
                     <div class="lyric">
-                        <p>歌词1</p>
-                        <p>歌词2</p>
-                        <p>歌词3</p>
-                        <p>歌词4</p>
-                        <p>歌词5</p>
-                        <p>歌词6</p>
-                        <p>歌词7</p>
-                        <p>歌词8</p>
-                        <p>歌词9</p>
-                        <p>歌词10</p>
                     </div>
                 </div>
             </div>
+            <!--歌词区域结束-->
         </div>
+        <!--歌曲区域结束-->
+        <!--页脚按钮区域-->
         <div class="links">
             <span class="open">打 开</span>
             <span class="download">下 载</span>
         </div>
     </div>
 </div>
+
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="//at.alicdn.com/t/font_560319_880xrfl6l3hrrudi.js"></script>
+<script src="./scripts/song.js"></script>
 </body>
 </html>

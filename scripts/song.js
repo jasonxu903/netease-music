@@ -32,21 +32,22 @@ $(function () {
     let $play = $('.song .play')
     let $pause = $('.vinyl .pause')
     audio.src = '//res.cloudinary.com/dreza9htn/video/upload/v1517406676/C400003vUjJp3QwFcd_cp6uup.mp4'
-    $('html').one('touchstart', function () {
-        audio.play()
-    })
     audio.oncanplay = function () {
         audio.play()
         $vinyl.addClass('active')
+        $pause.addClass('active')
+        $play.removeClass('active')
     }
     $pause.on('click', function () {
         audio.pause()
         $vinyl.removeClass('active')
+        $pause.removeClass('active')
         $play.addClass('active')
     })
     $play.on('click', function () {
         audio.play()
         $vinyl.addClass('active')
+        $pause.addClass('active')
         $play.removeClass('active')
     })
 

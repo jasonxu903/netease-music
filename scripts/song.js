@@ -31,7 +31,7 @@ $(function () {
     let $vinyl = $('.song .vinyl')
     let $play = $('.song .play')
     let $pause = $('.vinyl .pause')
-    audio.src = 'https://dl.stream.qqmusic.qq.com/C400003vUjJp3QwFcd.m4a?vkey=60AB72EE74D416F8C9B73D1DE0F829C94099CC166301DD82478BBB1FC241E4EDB03A1ED700124D299EC954E5655E32A8439C4A6FB73DBD6C&guid=6569913352&uin=0&fromtag=66'
+    audio.src = '//res.cloudinary.com/dreza9htn/video/upload/v1517406676/C400003vUjJp3QwFcd_cp6uup.mp4'
     audio.oncanplay = function () {
         audio.play()
         $vinyl.addClass('active')
@@ -46,5 +46,11 @@ $(function () {
         $vinyl.addClass('active')
         $play.removeClass('active')
     })
+
+    // 歌词控制
+    $('.open').on('click', function () {
+        console.log(audio.currentTime)
+    })
+
 })
 

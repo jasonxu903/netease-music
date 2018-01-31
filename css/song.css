@@ -19,13 +19,19 @@
 /*页面样式*/
 /*整夜容器部分*/
 .page {
-    position: relative;
+    /*position: relative;*/
     background: url("../images/background.jpeg") top;
+    height: 100vh;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+}
+.masking {
+    position: relative;
     height: 100vh;
     display: flex;
     flex-direction: column;
+    background: rgba(0, 0, 0, .4);
 }
-
 /*左上角logo*/
 .logo {
     position: absolute;
@@ -50,6 +56,7 @@
     align-items: center;
     margin-top: 18vw;
 }
+
 .song .cover {
     position: absolute;
     width: 49vw;
@@ -67,18 +74,19 @@
 .song .disc {
     z-index: 1;
 }
+
 /*碟片反光*/
 .song .disc-light {
-position: absolute;
-z-index: 2;
-animation: circle 20s linear infinite;
+    position: absolute;
+    z-index: 2;
+    animation: circle 20s linear infinite;
 }
+
 .song .disc img,
 .song .disc-light img {
     width: 79vw;
     height: 79vw;
 }
-
 
 /*指针*/
 .song .needle {
@@ -95,6 +103,7 @@ animation: circle 20s linear infinite;
 
 /*歌词部分*/
 .description {
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -102,6 +111,7 @@ animation: circle 20s linear infinite;
     color: #fefefe;
     text-align: center;
 }
+
 /*歌曲名*/
 .description .name {
     width: 81.3vw;
@@ -111,6 +121,7 @@ animation: circle 20s linear infinite;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+
 /*歌词*/
 /*歌词容器*/
 .description .lyric-container {
@@ -120,6 +131,7 @@ animation: circle 20s linear infinite;
     height: 26vw;
     overflow: hidden;
 }
+
 /*歌词文本*/
 .description .lyric p {
     padding: 2.2vw 0;
@@ -128,15 +140,16 @@ animation: circle 20s linear infinite;
 
 /*页脚链接*/
 .links {
-    position: absolute;
-    bottom: 5vw;
     width: 100%;
     display: flex;
     justify-content: space-around;
+    position: absolute;
+    bottom: 2.5vw;
 }
+
 .links span {
     display: block;
-    width: 42vw;
+    width: 46vw;
     padding: 2.8vw;
     border: 1px solid #d33a31;
     border-radius: 10.6vw;
@@ -145,9 +158,11 @@ animation: circle 20s linear infinite;
     font-size: 4.8vw;
     line-height: 1;
 }
+
 .links .open {
     color: #d33a31;
 }
+
 .links .download {
     color: #fefefe;
     background-color: #d33a31;
